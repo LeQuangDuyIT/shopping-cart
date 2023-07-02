@@ -7,7 +7,7 @@ const FilterSetting = props => {
     return (
         <div className="filter-space">
             <div>
-                <a className="show-all" onClick={handleShowAll}>Show All</a>
+                <p className="show-all" onClick={handleShowAll}>Show All</p>
             </div>
             <div>
                 <h4>Size:</h4>
