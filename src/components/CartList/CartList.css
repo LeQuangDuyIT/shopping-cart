@@ -31,7 +31,7 @@
     text-align: center;
 }
 .toggle-btn:hover {
-    background: rgb(155, 155, 155)
+    background: rgb(155, 155, 155);
 }
 .toggle-btn i {
     line-height: 50px;
@@ -63,7 +63,7 @@
 .cart-body {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 
     flex-grow: 1;
     height: 637px;
