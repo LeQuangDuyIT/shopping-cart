@@ -1,0 +1,85 @@
+.cart-item__wrap {
+    position: relative;
+
+    padding: 5%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.cart-item__core {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-item__wrap:hover{
+    background: rgba(255, 255, 255, .1);
+}
+.cart-item__wrap:hover .delete-product {
+    display: block;
+}
+.product-info {
+    display: flex;
+    gap: 12.5px;
+
+    width: 85%;
+}
+.product-info__thumbnail {
+    width: 20%;
+}
+.product-info__thumbnail img {
+    width: 100%;
+    height: auto;
+}
+.product-info__title {
+    padding: 18.75px 0;
+}
+.product-money {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 12.5px;
+}
+.product-money .product-money__value {
+    color: rgb(234, 191, 0);
+
+    font-size: 18px;
+}
+.product-money .change-quantity-btn {
+    display: flex;
+}
+.change-quantity-btn input {
+    width: 30px;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    text-align: center;
+}
+.change-quantity-btn button {
+    width: 18.75px;
+    height: 25px;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.change-quantity-btn button:hover{
+    background: white;
+    color: black;
+}
+.product-money .delete-product {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 18.75px;
+    height: 18.75px;
+    cursor: pointer;
+    border: none;
+
+    opacity: 0.4;
+}
+.product-money .delete-product:hover {
+    opacity: 0.7;
+}

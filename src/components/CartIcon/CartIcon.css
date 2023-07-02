@@ -1,0 +1,26 @@
+.cart-icon__wrap{
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+
+    text-align: center;
+}
+.cart-icon__wrap i{
+    line-height: 50px;
+}
+.cart-length{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    background: rgb(234, 191, 0);
+    color: black;
+
+    line-height: 18px;
+    font-size: 12px;
+}

@@ -1,0 +1,17 @@
+.app__main {
+    width: 80%;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+.product-length{
+    padding: 0 7.75px;
+
+    text-align: right;
+}
+.product-length span{
+    font-weight: bold;
+}
