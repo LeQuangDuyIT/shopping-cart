@@ -71,7 +71,6 @@ function App() {
         setFilterCriteria(newFilterCriteria);
     };
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleFilter = () => {
         const SIZE_CRITERIA = filterCriteria[SIZE];
         const GENDER_CRITERIA = filterCriteria[GENDER];
@@ -108,7 +107,8 @@ function App() {
         } else {
             setProductList(mockupDatas);
         }
-    }, [filterCriteria, handleFilter]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [filterCriteria]);
 
     const handleShowAll = () => {
         setFilterCriteria(initialCriteria);
