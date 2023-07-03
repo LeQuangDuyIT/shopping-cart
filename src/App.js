@@ -20,8 +20,9 @@ function App() {
     const [cart, setCart] = useState([]);
 
     const handleAddProduct = id => {
-        if (!cart.find(product => product.id === id)) {
-            const newProduct = { ...mockupDatas.find(product => product.id === id), quantity: 1 };
+        const shouldAdd = !cart.find(product => product.id === id);
+        if (shouldAdd) {
+            const newProduct = { ...productList.find(product => product.id === id), quantity: 1 };
             setCart([...cart, newProduct]);
         } else {
             handleUpdateCart(id, 1);
@@ -70,6 +71,7 @@ function App() {
         setFilterCriteria(newFilterCriteria);
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleFilter = () => {
         const SIZE_CRITERIA = filterCriteria[SIZE];
         const GENDER_CRITERIA = filterCriteria[GENDER];
@@ -96,7 +98,6 @@ function App() {
         if (FREESHIP_CRITERIA) {
             filteredProductList = filteredProductList.filter(product => product.freeship);
         }
-        filteredProductList = [...new Set(filteredProductList)];
         setProductList(filteredProductList);
     };
 
@@ -107,7 +108,7 @@ function App() {
         } else {
             setProductList(mockupDatas);
         }
-    }, [filterCriteria]);
+    }, [filterCriteria, handleFilter]);
 
     const handleShowAll = () => {
         setFilterCriteria(initialCriteria);
