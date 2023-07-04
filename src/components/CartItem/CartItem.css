@@ -54,6 +54,17 @@
 
     text-align: center;
 }
+/* Chrome, Safari, Edge, Opera */
+.change-quantity-btn input::-webkit-outer-spin-button,
+.change-quantity-btn input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.change-quantity-btn input[type=number] {
+  -moz-appearance: textfield;
+}
 .change-quantity-btn button {
     width: 18.75px;
     height: 25px;

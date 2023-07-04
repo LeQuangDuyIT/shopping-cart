@@ -18,15 +18,11 @@ const CartItem = props => {
     };
 
     const onInputQuantity = e => {
-        const inputValue = e.target.value.replace(/[^0-9]/g, '');
+        const inputValue = e.target.value;
         if (inputValue && inputValue !== '0') {
             setProductQuantity(inputValue);
             handleUpdateCart(id, inputValue - productQuantity);
         }
-    };
-
-    const onRemoveProduct = () => {
-        handleRemoveProduct(id);
     };
 
     return (
@@ -44,12 +40,17 @@ const CartItem = props => {
                         <button onClick={() => onChangeQuantity(-1)} style={{ opacity: quantity <= 1 ? 0.2 : 1 }}>
                             <i className="fa-solid fa-minus fa-2xs"></i>
                         </button>
-                        <input type="text" name="productQuantity" value={productQuantity} onChange={onInputQuantity} />
+                        <input
+                            type="number"
+                            name="productQuantity"
+                            value={productQuantity}
+                            onChange={onInputQuantity}
+                        />
                         <button onClick={() => onChangeQuantity(1)}>
                             <i className="fa-solid fa-plus fa-xs"></i>
                         </button>
                     </div>
-                    <button className="delete-product" onClick={onRemoveProduct}>
+                    <button className="delete-product" onClick={() => handleRemoveProduct(id)}>
                         <i className="fa-solid fa-xmark"></i>
                     </button>
                 </div>
